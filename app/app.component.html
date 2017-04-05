@@ -28,12 +28,15 @@
 <!--MENU RIGHT SIDEBAR-->
 <md-sidenav-container class="example-container">
   <md-sidenav align="end" #sidenav class="example-sidenav">
-    <md-card>
-      <md-card-header>
-        <md-card-title md-button href=# >Bienvenidos</md-card-title>
-        <md-card-subtitle>Subtitle</md-card-subtitle>
-      </md-card-header>
-    </md-card>
+
+    <md-nav-list>
+      <md-list-item *ngFor="let link of links">
+        <a md-line href="#">{{ link }}</a>
+        <button md-icon-button (click)="showInfo(link)">
+        <md-icon>info</md-icon>
+     </button>
+      </md-list-item>
+    </md-nav-list>
 
   </md-sidenav>
 
