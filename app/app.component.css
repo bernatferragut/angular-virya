@@ -33,5 +33,7 @@
 
 .example-sidenav {
   padding: 20px;
+  display: flex;
+  direction: vertical;
 }
 
