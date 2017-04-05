@@ -1,3 +1,54 @@
-<h1>
-  {{title}}
-</h1>
+<!--TOOLBAR-->
+<md-toolbar color="primary">
+  <!--LEFT-LOGO-->
+  <button md-icon-button [mdMenuTriggerFor]="menu1" color="accent">
+    <md-icon>spa</md-icon>
+  </button>
+  <!--LEFT-MENU-->
+  <md-menu #menu1="mdMenu">
+    <button md-menu-item (click)="onSelect('recipe')"> 
+      <md-icon>brightness_high</md-icon>
+      <a>Vipassana</a>
+    </button>
+    <!--SHOPPING-->
+    <button md-menu-item (click)="onSelect('shoppingList')">
+      <md-icon>brightness_high</md-icon>
+      <span>Dhamma</span>
+    </button>
+  </md-menu>
+  <!--MAIN TITLE-->
+  <span class="main-title"> Dhamma Virya </span>
+  <span class="spacer"></span>
+  <!--RIGHT MENU-->
+  <button 
+    md-icon-button 
+    (click)="sidenav.open()">
+    <md-icon>menu</md-icon>
+  </button>
+
+</md-toolbar>
+<!--MENU RIGHT SIDEBAR-->
+<md-sidenav-container class="example-container">
+
+  <md-sidenav align="end" #sidenav class="example-sidenav">
+    <md-card>
+      <md-card-title>Bienvenidos</md-card-title>
+      <md-card-title>Proyecto</md-card-title>
+      <md-card-subtitle>Fase1</md-card-subtitle>
+      <md-card-subtitle>Fase2</md-card-subtitle>
+      <md-card-subtitle>Fase3</md-card-subtitle>
+      <md-card-title>Contribucion</md-card-title>
+      <md-card-subtitle>Monetaria</md-card-subtitle>
+      <md-card-subtitle>Voluntariado</md-card-subtitle>
+      <md-card-subtitle>C.No.Material</md-card-subtitle>
+      <md-card-title>Contacto</md-card-title>
+    </md-card>
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+    <button md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>
+
+</md-sidenav-container>
