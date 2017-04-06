@@ -7,6 +7,8 @@ import { Component,Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
 
+  selectedMenu = '';
+
   links = [
     'Welcome',
     'Project',
@@ -15,7 +17,8 @@ export class AppComponent {
   ]
 
   showInfo(link: string){
-    console.log(link);
+    this.selectedMenu = link;
+    console.log(this.selectedMenu);
   }
 
 }

@@ -31,10 +31,8 @@
 
     <md-nav-list>
       <md-list-item *ngFor="let link of links ;let i=index">
-        <a md-line (click)="showInfo(link)">{{ link }}</a>
-        <button md-icon-button>
         <md-icon>keyboard_arrow_left</md-icon>
-     </button>
+        <a md-line (click)="showInfo(link)">{{ link }}</a>
       </md-list-item>
     </md-nav-list>
 
@@ -46,12 +44,6 @@
     </md-card>
     <md-card>
       <app-project></app-project>
-    </md-card>
-    <md-card>
-      <app-contributions></app-contributions>
-    </md-card>
-    <md-card>
-      <app-contact></app-contact>
     </md-card>
   </div>
 
