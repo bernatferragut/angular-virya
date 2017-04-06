@@ -38,3 +38,9 @@
   justify-content: flex-end;
 }
 
+.mainframe{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+

@@ -6,12 +6,12 @@
   </button>
   <!--LEFT-MENU-->
   <md-menu #menu1="mdMenu">
-    <button md-menu-item (click)="onSelect('recipe')"> 
+    <button md-menu-item (click)="onSelect('vipassana')"> 
       <md-icon>brightness_high</md-icon>
       <a>Vipassana</a>
     </button>
     <!--SHOPPING-->
-    <button md-menu-item (click)="onSelect('shoppingList')">
+    <button md-menu-item (click)="onSelect('dhamma')">  
       <md-icon>brightness_high</md-icon>
       <span>Dhamma</span>
     </button>
@@ -27,23 +27,46 @@
 </md-toolbar>
 <!--MENU RIGHT SIDEBAR-->
 <md-sidenav-container class="example-container">
-  <md-sidenav align="end" #sidenav class="example-sidenav">
+  <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
 
     <md-nav-list>
-      <md-list-item *ngFor="let link of links">
-        <a md-line href="#">{{ link }}</a>
-        <button md-icon-button (click)="showInfo(link)">
-        <md-icon>info</md-icon>
-     </button>
+      <md-list-item >
+        <md-icon>keyboard_arrow_left</md-icon>
+        <a md-line href="#">Welcome</a>
+        <button md-icon-button (click)="onSelected('welcome')"></button>
+      </md-list-item>
+      <md-list-item >
+        <md-icon>keyboard_arrow_left</md-icon>
+        <a md-line href="#">Project</a>
+        <button md-icon-button (click)="onSelected()"></button>
+      </md-list-item>
+      <md-list-item >
+        <md-icon>keyboard_arrow_left</md-icon>
+        <a md-line href="#">Contributions</a>
+        <button md-icon-button (click)="onSelected()"></button>
+      </md-list-item>
+      <md-list-item >
+        <md-icon>keyboard_arrow_left</md-icon>
+        <a md-line href="#">Contact</a>
+        <button md-icon-button (click)="onSelected()"></button>
       </md-list-item>
     </md-nav-list>
 
   </md-sidenav>
 <!--MAIN CONTENT-->
   <div class="example-sidenav-content">
-    <button md-button (click)="sidenav.open()">
-      Open sidenav
-    </button>
+    <md-card class="mainframe">
+      <app-welcome></app-welcome>
+    </md-card>
+    <md-card class="mainframe">
+      <app-project></app-project>
+    </md-card>
+    <md-card class="mainframe">
+      <app-contributions></app-contributions>
+    </md-card>
+    <md-card class="mainframe">
+      <app-contact></app-contact>
+    </md-card>
   </div>
 
 </md-sidenav-container>

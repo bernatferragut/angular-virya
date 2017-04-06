@@ -6,10 +6,18 @@ import {MaterialModule} from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ProjectComponent } from './project/project.component';
+import { ContributionsComponent } from './contributions/contributions.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    ProjectComponent,
+    ContributionsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
