@@ -27,7 +27,7 @@
 </md-toolbar>
 <!--MENU RIGHT SIDEBAR-->
 <md-sidenav-container class="example-container">
-  <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
+  <md-sidenav align="end" #sidenav class="example-sidenav" mode="over">
 
     <md-nav-list>
       <md-list-item *ngFor="let link of links ;let i=index">
@@ -38,13 +38,23 @@
 
   </md-sidenav>
   <!--MAIN CONTENT-->
-  <div class="example-sidenav-content">
-    <md-card>
-      <app-welcome></app-welcome>
+  <div class="example-sidenav-content" [ngSwitch]="selectedMenu">
+    <md-card *ngSwitchCase="'Welcome'">
+      <app-welcome ></app-welcome>
     </md-card>
-    <md-card>
-      <app-project></app-project>
+    <md-card *ngSwitchCase="'Project'">
+      <app-project ></app-project>
+    </md-card>
+    <md-card *ngSwitchCase="'Contribute'">
+      <app-contributions ></app-contributions>
+    </md-card>
+    <md-card *ngSwitchCase="'Contact'">
+      <app-contact ></app-contact>
+    </md-card>
+    <md-card *ngSwitchDefault>
+      <app-welcome ></app-welcome>
     </md-card>
   </div>
+
 
 </md-sidenav-container>

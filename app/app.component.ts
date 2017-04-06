@@ -8,17 +8,20 @@ import { Component,Output, EventEmitter } from '@angular/core';
 export class AppComponent {
 
   selectedMenu = '';
+  activado = false;
 
   links = [
     'Welcome',
     'Project',
-    'Contributions',
+    'Contribute',
     'Contact'
   ]
 
   showInfo(link: string){
     this.selectedMenu = link;
-    console.log(this.selectedMenu);
+    this.activado = !this.activado;
+    console.log(this.selectedMenu + this.activado);
+    //return this.selectedMenu;
   }
 
 }
