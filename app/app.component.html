@@ -30,41 +30,27 @@
   <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
 
     <md-nav-list>
-      <md-list-item >
+      <md-list-item *ngFor="let link of links ;let i=index">
+        <a md-line (click)="showInfo(link)">{{ link }}</a>
+        <button md-icon-button>
         <md-icon>keyboard_arrow_left</md-icon>
-        <a md-line href="#">Welcome</a>
-        <button md-icon-button (click)="onSelected('welcome')"></button>
-      </md-list-item>
-      <md-list-item >
-        <md-icon>keyboard_arrow_left</md-icon>
-        <a md-line href="#">Project</a>
-        <button md-icon-button (click)="onSelected()"></button>
-      </md-list-item>
-      <md-list-item >
-        <md-icon>keyboard_arrow_left</md-icon>
-        <a md-line href="#">Contributions</a>
-        <button md-icon-button (click)="onSelected()"></button>
-      </md-list-item>
-      <md-list-item >
-        <md-icon>keyboard_arrow_left</md-icon>
-        <a md-line href="#">Contact</a>
-        <button md-icon-button (click)="onSelected()"></button>
+     </button>
       </md-list-item>
     </md-nav-list>
 
   </md-sidenav>
-<!--MAIN CONTENT-->
+  <!--MAIN CONTENT-->
   <div class="example-sidenav-content">
-    <md-card class="mainframe">
+    <md-card>
       <app-welcome></app-welcome>
     </md-card>
-    <md-card class="mainframe">
+    <md-card>
       <app-project></app-project>
     </md-card>
-    <md-card class="mainframe">
+    <md-card>
       <app-contributions></app-contributions>
     </md-card>
-    <md-card class="mainframe">
+    <md-card>
       <app-contact></app-contact>
     </md-card>
   </div>

@@ -7,14 +7,15 @@ import { Component,Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
 
-selected = false;
-itemSelected: string;
-hasBeenSelected = new EventEmitter();
+  links = [
+    'Welcome',
+    'Project',
+    'Contributions',
+    'Contact'
+  ]
 
-onSelected(feature: string){
-  this.selected = true;
-  this.itemSelected = feature;
-  console.log(this.selected);
-}
+  showInfo(link: string){
+    console.log(link);
+  }
 
 }
