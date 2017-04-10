@@ -28,3 +28,5 @@ export class AppComponent {
 
 // Include the double language doing the following:
 // EN / ES bool var activate when 
+// On showInfo activate bollean EN/Es to true/false and choose a linke
+// maybe pass a 'link' + lang as parameter and choose later depending...
