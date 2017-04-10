@@ -1,0 +1,11 @@
+{
+  "welcome":
+  {
+    "title": "WELCOME",
+    "subtitle": "Welcome Subtitle",
+    "img": "../assets/images/welcome.png",
+    "content": "This is the content of the Menu Item (...)"
+  }
+}
+
+

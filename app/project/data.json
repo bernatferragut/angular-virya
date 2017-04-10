@@ -1,0 +1,9 @@
+{
+  "project":
+  {
+    "title": "PROJECT",
+    "subtitle": "Project Subtitle",
+    "img": "../assets/images/project.png",
+    "content": "This is the content of the Menu Item Project"
+  }
+}

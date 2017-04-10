@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Http} from '@angular/http';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
+  importedObject={};
 
-  ngOnInit() {
+  constructor(private http: Http) { 
+
+    this.http.get('./app/contact/data.json')
+      .map(response => response.json().contact)
+      .subscribe(res => this.importedObject = res);
+     // console.log(this.importedObject);
+     
   }
 
 }
+
+

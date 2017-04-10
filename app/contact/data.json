@@ -1,0 +1,9 @@
+{
+  "contact":
+  {
+    "title": "CONTACT",
+    "subtitle": "Contact Subtitle",
+    "img": "../assets/images/contact.png",
+    "content": "This is the content of the Menu Item Contact"
+  }
+}

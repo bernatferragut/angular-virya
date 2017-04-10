@@ -1,3 +1,25 @@
-<p>
-  CONTRIBUTIONS works!
-</p>
+<md-tab-group>
+  <md-tab label="Money">
+
+    <md-card>
+      <md-card-header>
+        <md-card-title>{{ importedObject.title }}</md-card-title>
+        <md-card-subtitle></md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="{{ importedObject.img }}">
+      <md-card-content>
+        <p>
+          {{ importedObject.content }}
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+
+  </md-tab>
+  <md-tab label="Service">
+
+  </md-tab>
+</md-tab-group>

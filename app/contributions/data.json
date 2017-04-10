@@ -1,0 +1,9 @@
+{
+  "contributions":
+  {
+    "title": "CONTRIBUTIONS",
+    "subtitle": "Contributions Subtitle",
+    "img": "../assets/images/contribute.png",
+    "content": "This is the content of the Menu Item Contributions"
+  }
+}

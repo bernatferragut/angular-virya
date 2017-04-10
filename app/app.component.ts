@@ -18,10 +18,10 @@ export class AppComponent {
   ]
 
   showInfo(link: string){
+
     this.selectedMenu = link;
-    this.activado = !this.activado;
     console.log(this.selectedMenu + this.activado);
-    //return this.selectedMenu;
+
   }
 
 }

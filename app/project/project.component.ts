@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Http} from '@angular/http';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css']
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent  {
 
-  constructor() { }
+  importedObject={};
 
-  ngOnInit() {
+  constructor(private http: Http) { 
+
+    this.http.get('./app/project/data.json')
+      .map(response => response.json().project)
+      .subscribe(res => this.importedObject = res);
+     // console.log(this.importedObject);
+     
   }
-
 }
+
+
