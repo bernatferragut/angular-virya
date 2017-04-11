@@ -19,10 +19,10 @@ export class AppComponent {
   showInfo(link: string){
     if(this.english === false){
       this.selectedMenu = link + 'es';
-      console.log(this.english);
+      console.log('spanish is true');
     }else{
       this.selectedMenu = link + 'en';
-      console.log(this.english);
+      console.log('englsih is true');
     }
     console.log(this.selectedMenu);
   }
