@@ -8,7 +8,6 @@ import { Component,Output, EventEmitter } from '@angular/core';
 export class AppComponent {
 
   selectedMenu = '';
-  activado = false;
   english = false;
   links = ['Welcome','Project','Contribute','Contact']
 
@@ -18,10 +17,12 @@ export class AppComponent {
   }
 
   showInfo(link: string){
-    if(this.english = true){
-      this.selectedMenu = link;
-      console.log(this.selectedMenu + this.activado);
+    if(this.english === false){
+      this.selectedMenu = link + 'es';
+    }else{
+      this.selectedMenu = link + 'en';
     }
+    console.log(this.selectedMenu);
   }
 }
 
