@@ -11,16 +11,18 @@ export class AppComponent {
   english = false;
   links = ['Welcome','Project','Contribute','Contact']
 
-  langChange(){
-    this.english = !this.english;
-    console.log('english:' + this.english);
-  }
+  // langChange(){
+  //   this.english = !this.english;
+  //   console.log('english:' + this.english);
+  // }
 
   showInfo(link: string){
     if(this.english === false){
       this.selectedMenu = link + 'es';
+      console.log(this.english);
     }else{
       this.selectedMenu = link + 'en';
+      console.log(this.english);
     }
     console.log(this.selectedMenu);
   }
