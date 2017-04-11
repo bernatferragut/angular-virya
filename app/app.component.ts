@@ -13,7 +13,8 @@ export class AppComponent {
   links = ['Welcome','Project','Contribute','Contact']
 
   langChange(){
-    this.english = true;
+    this.english = !this.english;
+    console.log('english:' + this.english);
   }
 
   showInfo(link: string){
