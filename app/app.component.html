@@ -32,15 +32,15 @@
 <md-sidenav-container class="example-container">
   <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
 
-    <md-nav-list>
+    <md-nav-list *ngIf="english==false">
       <md-list-item *ngFor="let link of linksES ;let i=index">
         <md-icon>keyboard_arrow_left</md-icon>
         <a md-line (click)="showInfo(link)">{{ link }}</a>
       </md-list-item>
     </md-nav-list>
-
-    <md-nav-list>
-      <md-list-item *ngFor="let link of linksES ;let i=index">
+    
+    <md-nav-list *ngIf="english==true">
+      <md-list-item *ngFor="let link of linksEN ;let i=index">
         <md-icon>keyboard_arrow_left</md-icon>
         <a md-line (click)="showInfo(link)">{{ link }}</a>
       </md-list-item>
