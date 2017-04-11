@@ -21,6 +21,4 @@ export class ContactComponent {
 
 }
 
-// Include the double language doing the following:
-// EN / ES bool var activate when 
 

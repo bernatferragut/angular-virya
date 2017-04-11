@@ -9,20 +9,19 @@ export class AppComponent {
 
   selectedMenu = '';
   activado = false;
+  english = false;
+  links = ['Welcome','Project','Contribute','Contact']
 
-  links = [
-    'Welcome',
-    'Project',
-    'Contribute',
-    'Contact'
-  ]
+  langChange(){
+    this.english = true;
+  }
 
   showInfo(link: string){
-
     this.selectedMenu = link;
     console.log(this.selectedMenu + this.activado);
-
   }
+
+
 
 }
 
