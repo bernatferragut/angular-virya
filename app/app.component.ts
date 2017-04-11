@@ -18,12 +18,11 @@ export class AppComponent {
   }
 
   showInfo(link: string){
-    this.selectedMenu = link;
-    console.log(this.selectedMenu + this.activado);
+    if(this.english = true){
+      this.selectedMenu = link;
+      console.log(this.selectedMenu + this.activado);
+    }
   }
-
-
-
 }
 
 // Include the double language doing the following:
