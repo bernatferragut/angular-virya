@@ -20,8 +20,7 @@
   <span class="main-title"> Dhamma Virya </span>
   <span class="spacer"></span>
   <!--RIGHT LANGUAGE-->
-  <button md-button 
-  (click)="english = !english">
+  <button md-button (click)="english = !english">
   {{english ? 'EN' : 'ES'}}</button>
   <!--RIGHT SANDWICH MENU-->
   <button md-icon-button (click)="sidenav.open()">
@@ -34,7 +33,14 @@
   <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
 
     <md-nav-list>
-      <md-list-item *ngFor="let link of links ;let i=index">
+      <md-list-item *ngFor="let link of linksES ;let i=index">
+        <md-icon>keyboard_arrow_left</md-icon>
+        <a md-line (click)="showInfo(link)">{{ link }}</a>
+      </md-list-item>
+    </md-nav-list>
+
+    <md-nav-list>
+      <md-list-item *ngFor="let link of linksES ;let i=index">
         <md-icon>keyboard_arrow_left</md-icon>
         <a md-line (click)="showInfo(link)">{{ link }}</a>
       </md-list-item>
@@ -44,21 +50,21 @@
   <!--MAIN CONTENT-->
   <div class="example-sidenav-content" [ngSwitch]="selectedMenu">
     <md-card *ngSwitchCase="'Welcome'">
-      <app-welcome ></app-welcome>
+      <app-welcome></app-welcome>
     </md-card>
     <md-card *ngSwitchCase="'Project'">
-      <app-project ></app-project>
+      <app-project></app-project>
     </md-card>
     <md-card *ngSwitchCase="'Contribute'">
-      <app-contributions ></app-contributions>
+      <app-contributions></app-contributions>
     </md-card>
     <md-card *ngSwitchCase="'Contact'">
-      <app-contact ></app-contact>
+      <app-contact></app-contact>
     </md-card>
     <md-card *ngSwitchDefault>
-      <app-welcome ></app-welcome>
+      <app-welcome></app-welcome>
     </md-card>
   </div>
-<!--FOOTER-->
+  <!--FOOTER-->
 </md-sidenav-container>
-<md-toolbar class="footer"> v i r y i a . d h a m m a . o r g  - 2 0 1 7 </md-toolbar>
+<md-toolbar class="footer"> v i r y i a . d h a m m a . o r g - 2 0 1 7 </md-toolbar>

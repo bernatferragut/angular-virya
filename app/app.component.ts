@@ -9,7 +9,8 @@ export class AppComponent {
 
   selectedMenu = '';
   english = false;
-  links = ['Welcome','Project','Contribute','Contact']
+  linksES = ['Bienvenido','Proyecto','Contribuye','Contacto'];
+  linksEN = ['Welcome','Project','Contribute','Contact'];
 
   // langChange(){
   //   this.english = !this.english;
@@ -18,10 +19,10 @@ export class AppComponent {
 
   showInfo(link: string){
     if(this.english === false){
-      this.selectedMenu = link + 'es';
+      this.selectedMenu = link + 'ES';
       console.log('spanish is true');
     }else{
-      this.selectedMenu = link + 'en';
+      this.selectedMenu = link + 'EN';
       console.log('englsih is true');
     }
     console.log(this.selectedMenu);
