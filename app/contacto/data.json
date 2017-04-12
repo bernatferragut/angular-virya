@@ -1,0 +1,9 @@
+{
+  "contacto":
+  {
+    "title": "CONTACTO",
+    "subtitle": "Contacto Subtitulos",
+    "img": "../assets/images/contacto.png",
+    "content": "Este es el contenido de contacto"
+  }
+}

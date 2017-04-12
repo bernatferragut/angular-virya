@@ -10,12 +10,9 @@ export class WelcomeComponent {
 
   importedObject={};
 
-  constructor(private http: Http) { 
-
+  constructor(private http: Http,) { 
     this.http.get('./app/welcome/data.json')
       .map(response => response.json().welcome)
       .subscribe(res => this.importedObject = res);
-     // console.log(this.importedObject);
-     
   }
 }

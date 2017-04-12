@@ -10,6 +10,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectComponent } from './project/project.component';
 import { ContributionsComponent } from './contributions/contributions.component';
 import { ContactComponent } from './contact/contact.component';
+import { BienvenidosComponent } from './bienvenidos/bienvenidos.component';
+import { ProyectoComponent } from './proyecto/proyecto.component';
+import { ContribucionesComponent } from './contribuciones/contribuciones.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { ContactComponent } from './contact/contact.component';
     WelcomeComponent,
     ProjectComponent,
     ContributionsComponent,
-    ContactComponent
+    ContactComponent,
+    BienvenidosComponent,
+    ProyectoComponent,
+    ContribucionesComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+{
+  "bienvenido":
+  {
+    "title": "BIENVENIDO",
+    "subtitle": "Bienvenido Subtitulo",
+    "img": "../assets/images/bienvenido.png",
+    "content": "Este es el contenido de Bienvenidos (...)"
+  }
+}

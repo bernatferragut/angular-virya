@@ -26,19 +26,19 @@
   <button md-icon-button (click)="sidenav.open()">
     <md-icon>menu</md-icon>
   </button>
-
 </md-toolbar>
+
 <!--MENU RIGHT SIDEBAR-->
 <md-sidenav-container class="example-container">
-  <md-sidenav align="end" #sidenav class="example-sidenav" mode="push">
-
+  <md-sidenav align="end" #sidenav class="example-sidenav" mode="over">
+    <!--SPANISH MENU-->
     <md-nav-list *ngIf="english==false">
       <md-list-item *ngFor="let link of linksES ;let i=index">
         <md-icon>keyboard_arrow_left</md-icon>
         <a md-line (click)="showInfo(link)">{{ link }}</a>
       </md-list-item>
     </md-nav-list>
-    
+    <!--ENGLISH MENU-->
     <md-nav-list *ngIf="english==true">
       <md-list-item *ngFor="let link of linksEN ;let i=index">
         <md-icon>keyboard_arrow_left</md-icon>
@@ -49,20 +49,38 @@
   </md-sidenav>
   <!--MAIN CONTENT-->
   <div class="example-sidenav-content" [ngSwitch]="selectedMenu">
+    <!--WELCOME-->
     <md-card *ngSwitchCase="'Welcome'">
       <app-welcome></app-welcome>
     </md-card>
+    <md-card *ngSwitchCase="'Bienvenidos'">
+      <app-bienvenidos></app-bienvenidos>
+    </md-card>
+    <!--PROJECT-->
     <md-card *ngSwitchCase="'Project'">
       <app-project></app-project>
     </md-card>
+    <md-card *ngSwitchCase="'Proyecto'">
+      <app-proyecto></app-proyecto>
+    </md-card>
+    <!--CONTRIBUTE-->
     <md-card *ngSwitchCase="'Contribute'">
       <app-contributions></app-contributions>
     </md-card>
+    <md-card *ngSwitchCase="'Contribuye'">
+      <app-contribuciones></app-contribuciones>
+    </md-card>
+    <!--CONTACT-->
     <md-card *ngSwitchCase="'Contact'">
       <app-contact></app-contact>
     </md-card>
+    <md-card *ngSwitchCase="'Contacto'">
+      <app-contacto></app-contacto>
+    </md-card>
+    <!--DEFAULT-->
     <md-card *ngSwitchDefault>
-      <app-welcome></app-welcome>
+      <app-bienvenidos *ngIf="english==false"></app-bienvenidos>
+      <app-welcome *ngIf="english==true"></app-welcome>
     </md-card>
   </div>
   <!--FOOTER-->

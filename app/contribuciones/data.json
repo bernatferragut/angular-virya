@@ -1,0 +1,9 @@
+{
+  "contribuciones":
+  {
+    "title": "CONTRIBUCIONES",
+    "subtitle": "Contribuciones Subtitulo",
+    "img": "../assets/images/contribuye.png",
+    "content": "Este es el contenido de contribuciones"
+  }
+}
