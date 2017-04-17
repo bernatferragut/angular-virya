@@ -15,7 +15,7 @@
 
       <md-card-actions>
         <!--FORMULARIO MONETARIO-->
-        <form (ngSubmit)="onSubmit(f)" 
+        <form (ngSubmit)="onSubmit()" 
         #f="ngForm"
         class="example-form">
           <md-input-container class="example-full-width">
@@ -33,7 +33,7 @@
                   <input 
                   mdInput 
                   placeholder="First name"
-                  ngModel
+                  [ngModel]="theName"
                   name="name"
                   required>
                 </md-input-container>
@@ -43,7 +43,7 @@
                   <input 
                   mdInput 
                   placeholder="Long Last Name That Will Be Truncated"
-                  ngModel
+                  [ngModel]="theSurname"
                   name="surname"
                   required>
                 </md-input-container>
@@ -56,12 +56,14 @@
               <textarea 
               mdInput 
               placeholder="email"
-              ngModel
+              [ngModel]="theMail"
               name="email"
               required
               email
+              #email="ngModel"
               >name@gmail.com
               </textarea>
+              <!--<span *ngIf="!email.valid">Please Enter a Valid email</span>-->
             </md-input-container>
             <md-input-container class="example-full-width">
               <textarea mdInput placeholder="Address 2"></textarea>
@@ -103,9 +105,20 @@
               </td>
             </tr>
           </table>
-          <button md-raised-button (click)="onClick" color="accent">ENVIAR FORMULARIO</button>
+          <button md-raised-button
+          [disabled]="!f.valid" 
+          color="accent">ENVIAR FORMULARIO</button>
         </form>
       </md-card-actions>
+    </md-card>
+    <md-card *ngIf="submitted">
+            <md-card-title>Data Summary</md-card-title>
+            <md-card-subtitle>name: {{ formData.name }}</md-card-subtitle>
+            <md-card-subtitle>surname: {{ formData.surname }}</md-card-subtitle>
+            <md-card-subtitle>email: {{ formData.email }}</md-card-subtitle>
+            <md-card-subtitle>city: {{ formData.city }}</md-card-subtitle>
+            <md-card-subtitle>state: {{ formData.state }}</md-card-subtitle>
+            <md-card-subtitle>postalcode: {{ formData.postalcode }}</md-card-subtitle>
     </md-card>
 
   </md-tab>

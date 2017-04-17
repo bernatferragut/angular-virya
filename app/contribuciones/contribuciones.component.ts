@@ -15,18 +15,31 @@ export class ContribucionesComponent {
       .subscribe(res => this.importedObject = res);
   }
 
-  @ViewChild('f') signupForm: NgForm; // This is a var from the HTML
+  @ViewChild('f') signupForm: NgForm; // var to fetch the NgForm Data
 
   importedObject={};
+  submitted = false;
 
-  onSubmit(f: NgForm){
-    console.log("submitted!");
-    console.log(f);
+  // Object to collect the input data
+  formData = {
+    name: '',
+    surname: '',
+    email: '',
+    city:'',
+    state: '',
+    postalcode:''
   }
 
-  // onsubmit(){
-  //   console.log(this.signupForm);
-  // }
+  onSubmit(){
+    this.submitted = true;
 
+    this.formData.name = this.signupForm.value.name;
+    this.formData.surname = this.signupForm.value.surname;
+    this.formData.email = this.signupForm.value.email;
+    this.formData.city = this.signupForm.value.city;
+    this.formData.state = this.signupForm.value.state;
+    this.formData.postalcode = this.signupForm.value.postalcode;
 
+    this.signupForm.reset();
+  }
 }
