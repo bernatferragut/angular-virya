@@ -48,7 +48,8 @@
 
   </md-sidenav>
   <!--MAIN CONTENT-->
-  <div class="example-sidenav-content" [ngSwitch]="selectedMenu">
+  <div 
+  class="example-sidenav-content" [ngSwitch]="selectedMenu">
     <!--WELCOME-->
     <md-card *ngSwitchCase="'Welcome'">
       <app-welcome></app-welcome>
