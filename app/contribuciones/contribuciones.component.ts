@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { NgForm } from "@angular/forms";
 
@@ -9,20 +9,24 @@ import { NgForm } from "@angular/forms";
 })
 export class ContribucionesComponent {
 
-  importedObject={};
-
   constructor(private http: Http) { 
-
     this.http.get('./app/contribuciones/data.json')
       .map(response => response.json().contribuciones)
       .subscribe(res => this.importedObject = res);
-     // console.log(this.importedObject);
-     
   }
+
+  @ViewChild('f') signupForm: NgForm; // This is a var from the HTML
+
+  importedObject={};
 
   onSubmit(f: NgForm){
     console.log("submitted!");
     console.log(f);
   }
+
+  // onsubmit(){
+  //   console.log(this.signupForm);
+  // }
+
 
 }

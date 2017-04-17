@@ -34,7 +34,8 @@
                   mdInput 
                   placeholder="First name"
                   ngModel
-                  name="name">
+                  name="name"
+                  required>
                 </md-input-container>
               </td>
               <td>
@@ -43,7 +44,8 @@
                   mdInput 
                   placeholder="Long Last Name That Will Be Truncated"
                   ngModel
-                  name="surname">
+                  name="surname"
+                  required>
                 </md-input-container>
               </td>
             </tr>
@@ -53,10 +55,12 @@
             <md-input-container class="example-full-width">
               <textarea 
               mdInput 
-              placeholder="Address"
+              placeholder="email"
               ngModel
-              name="address"
-              >1600 Amphitheatre Pkwy
+              name="email"
+              required
+              email
+              >name@gmail.com
               </textarea>
             </md-input-container>
             <md-input-container class="example-full-width">
