@@ -15,7 +15,9 @@
 
       <md-card-actions>
         <!--FORMULARIO MONETARIO-->
-        <form  class="example-form">
+        <form (ngSubmit)="onSubmit(f)" 
+        #f="ngForm"
+        class="example-form">
           <md-input-container class="example-full-width">
             <input mdInput 
             placeholder="Company (disabled)" disabled 

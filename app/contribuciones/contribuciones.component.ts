@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-contribuciones',
@@ -19,5 +20,9 @@ export class ContribucionesComponent {
      
   }
 
+  onSubmit(f: NgForm){
+    console.log("submitted!");
+    console.log(f);
+  }
 
 }
